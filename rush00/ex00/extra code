@@ -1,0 +1,42 @@
+int	character_check(char *argv[], int space_check, int inputs_of_user)
+{	
+	if (argv[2][inputs_of_user] >= '1' && argv[2][inputs_of_user] <= '4')
+	{
+		return(0);
+	}
+	else
+		return(1);
+}
+
+int	spc_chck(char *argv[], int space_check)
+{
+	if (argv[2][space_check] == ' ')
+	{
+		return(0);
+	}
+	else
+		return (1);
+}
+
+int	validcomb_check(char *argv[], int space_check, int inputs_of_user)
+{	
+	if ((argv[2][inputs_of_user] + argv[2][inputs_of_user + 8]) <= 5)
+	{
+		return(0);
+	}
+	else
+		return (1);
+}
+
+void	ehk(char *argv[], int space_check, int inputs_of_user, int while_break)
+{
+	if (character_check(argv[2], space_check, inputs_of_user) == 0)
+		while_break = 2;
+
+	else if (validcomb_check(argv[2], space_check, inputs_of_user) == 0)
+		while_break = 2;
+
+	else if (spc_chck(argv[2], space_check) == 0)
+		while_break = 2;
+}
+*/
